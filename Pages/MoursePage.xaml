@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TabFlayoutNavigation.Pages.MoursePage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="dr_stone_why_morse_code.jpg"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="A bit nerdy and the first half of the first episode is bad but everything else is great, it's a great anime." />
+
+            <Label
+                Text="Double Morse Code!"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Label
+                x:Name="VisiableMorseCodeLineTop"
+                Text="_"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Morse Code Output" />
+
+
+            <HorizontalStackLayout
+                Spacing="25">
+                <Button
+                    x:Name="MorseTopLeft"
+                    WidthRequest="60"
+                    Text="." 
+                    SemanticProperties.Hint="Morse code top left"
+                    Clicked="MorseInputTop"
+                    HorizontalOptions="FillAndExpand" />
+                <Button
+                    x:Name="MorseTopRight"
+                    WidthRequest="60"
+                    Text="-" 
+                    SemanticProperties.Hint="Morse code top right"
+                    Clicked="MorseInputTop"
+                    HorizontalOptions="FillAndExpand" />
+                <Button
+                    x:Name="MorseTopSpace"
+                    WidthRequest="60"
+                    Text=" " 
+                    SemanticProperties.Hint="Morse code top space"
+                    Clicked="MorseInputTop"
+                    HorizontalOptions="Fill" />
+            </HorizontalStackLayout>
+            
+
+            <Label
+                x:Name="VisiableMorseCodeLineBottom"
+                Text="_"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Morse Code Output" />
+
+            <HorizontalStackLayout
+                Spacing="25"
+                VerticalOptions="End"
+                HorizontalOptions="End">
+                <Button
+                    x:Name="MorseBottomLeft"
+                    WidthRequest="60"
+                    Text="." 
+                    SemanticProperties.Hint="Morse code bottom left"
+                    Clicked="MorseInputBottom"
+                    HorizontalOptions="FillAndExpand" />
+                <Button
+                    x:Name="MorseBottomRight"
+                    WidthRequest="60"
+                    Text="-" 
+                    SemanticProperties.Hint="Morse code bottom right"
+                    Clicked="MorseInputBottom"
+                    HorizontalOptions="FillAndExpand" />
+                <Button
+                    x:Name="MorseBottomSpace"
+                    WidthRequest="60"
+                    Text=" " 
+                    SemanticProperties.Hint="Morse code bottom space"
+                    Clicked="MorseInputBottom"
+                    HorizontalOptions="Fill" />
+            </HorizontalStackLayout>
+
+            <Label
+                x:Name="Info"
+                Text="Dots, dashes, and spaces"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level3"
+                SemanticProperties.Description="Info about the dots, dashes, and spaces" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

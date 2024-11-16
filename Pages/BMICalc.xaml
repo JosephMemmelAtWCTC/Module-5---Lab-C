@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TabFlayoutNavigation.Pages.BMICalc">
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="pngtree_protein_foods_and_dumbell_diet_png_image_9963708.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="Food and weights stolen image from pngtree.com" />
+
+            <Label
+                Text="BMI Caculator"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Label
+                Text="Please enter your weight in pounds"
+                SemanticProperties.HeadingLevel="Level3" />
+
+            <Editor x:Name="Inp_weight"
+                Placeholder="lbs"
+                PlaceholderColor="Green"/>
+
+            <Label
+                Text="Please enter your height in feet"
+                SemanticProperties.HeadingLevel="Level3" />
+
+            <Editor x:Name="Inp_height_feet"
+                Placeholder="ft"
+                PlaceholderColor="Green"/>
+
+            <Label
+                Text="And inches"
+                SemanticProperties.HeadingLevel="Level3" />
+
+            <Editor x:Name="Inp_height_inches"
+                Placeholder="in"
+                PlaceholderColor="Green"/>
+
+
+            <Label
+                x:Name="Lbl_BMI"
+                Text="Your BMI"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Results of BMI" />
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Click me" 
+                SemanticProperties.Hint="Caculates your BMI"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Fill" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

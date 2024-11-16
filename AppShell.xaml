@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="TabFlayoutNavigation.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:TabFlayoutNavigation.Pages"
+    Title="TabFlayoutNavigation">
+
+
+    <FlyoutItem Title="BMI" Icon="pngtree_protein_foods_and_dumbell_diet_png_image_9963708.png">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:BMICalc}"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Mourse Code" Icon="dr_stone_why_morse_code.jpg">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:MoursePage}"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Alchol Purchase Age" Icon="drink_responsibly.jpg">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:WhenCanILegallyBuyAlcohol}"/>
+    </FlyoutItem>
+
+</Shell>
